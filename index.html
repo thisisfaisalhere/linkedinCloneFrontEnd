@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linkedin Clone</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/> -->
+    <script src="https://kit.fontawesome.com/b6a16a6ee4.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="/styles/styles.css">
     <link rel="shortcut icon" href="/assests/linkedin.png" type="image/x-icon">
@@ -24,15 +25,41 @@
             </div>
             <div class="navbar-right">
                 <ul class="nav-items">
-                    <li class="nav-item" id="home"><a href=""><img src="/assests/home.png" alt="home" srcset=""></a></li>
-                    <li class="nav-item" id="people"><a href=""><img src="/assests/people.png" alt="people" srcset=""></a></li>
-                    <li class="nav-item" id="work"><a href=""><img src="/assests/work.png" alt="work" srcset=""></a></li>
-                    <li class="nav-item" id="msg"><a href=""><img src="/assests/msg.png" alt="msg" srcset=""></a></li>
-                    <li class="nav-item" id="notification"><a href=""><img src="/assests/bell.png" alt="bell" srcset=""></a></li>
-                    <li class="nav-item" id="profile"><a href=""><img src="/assests/profile.png" alt="profile" srcset=""></a></li>
-                    <li class="nav-item" id="options"><a href=""><img src="/assests/options.png" alt="options" srcset=""></a></li>
+                    <li class="nav-item" id="home"><a href="" class="nav-link"><i class="fas fa-home"></i></a></li>
+                    <li class="nav-item" id="people"><a href="" class="nav-link"><i class="fas fa-user-friends"></i></a></li>
+                    <li class="nav-item" id="work"><a href="" class="nav-link"><i class="fas fa-briefcase"></i></a></li>
+                    <li class="nav-item" id="msg"><a href="" class="nav-link"><i class="fas fa-comments"></i></a></li>
+                    <li class="nav-item" id="notification"><a href="" class="nav-link"><i class="fas fa-bell"></i></a></li>
+                    <li class="nav-item" id="profile"><a href="" class="nav-link"><img src="/assests/profile.png" alt="profile" srcset=""></a></li>
+                    <li class="nav-item" id="options"><a href="" class="nav-link"><img src="/assests/options.png" alt="options" srcset=""></a></li>
                 </ul>
                 <p class="try-premium">Try Premium Free for 1 Month</p>
+            </div>
+        </div>
+
+        <div class="navbar-mobile">
+            <div class="navbar-mobile__top">
+                <div class="navbar-profile">
+                    <a href="" class="nav-link"><img class="navbar-profile__img" src="/assests/profile.png" alt="profile"></a>
+                </div>
+                <div class="nav-search">
+                    <form class="nav-search__form">
+                        <input type="text" id="search-input" class="search-input" placeholder="&#xF002; Search" >
+                    </form>
+                </div>
+                <div class="messages">
+                    <a href="" class="nav-link"><i class="fas fa-comments"></i></a>
+                </div>
+            </div>
+    
+            <div class="navbar-mobile__bottom">
+                <ul class="nav-items">
+                    <li class="nav-item" id="home"><a href="" class="nav-link"><i class="fas fa-home"></i></a></li>
+                    <li class="nav-item" id="people"><a href="" class="nav-link"><i class="fas fa-user-friends"></i></a></li>
+                    <li class="nav-item" id="add"><a href="" class="nav-link"><i class="far fa-plus-square"></i></a></li>
+                    <li class="nav-item" id="notification"><a href="" class="nav-link"><i class="fas fa-bell"></i></a></li>
+                    <li class="nav-item" id="work"><a href="" class="nav-link"><i class="fas fa-briefcase"></i></a></li>
+                </ul>
             </div>
         </div>
     </section>
@@ -43,7 +70,7 @@
                 <div class="post-container">
                     <div class="other-followers">
                         <p class="follow-text"><span class="bold-text">Bad Boy Badshah, Yo Yo Bantai Raper</span> and 731 other connect follows Linkedin</p>
-                        <div class="options"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+                        <div class="options"><i class="fas fa-ellipsis-h"></i></div>
                     </div>
                     <div class="post">
                         <div class="shared-by">
@@ -51,27 +78,18 @@
                                 <div class="profile-photo"><img src="/assests/linkedin.png" alt="" srcset=""></div>
                                 <div class="profile-details">
                                     <p class="profile-name">Linkdin</p>
-                                    <p class="total-followers">200000 followers</p>
-                                    <p class="promoted">Promoted</p>
+                                    <p class="profile-summary">200000 followers</p>
+                                    <p class="more-details">Promoted</p>
                                 </div>
                             </div>
                             <div class="follow-button">
-                                <div class="button"><a href=""><i class="fa fa-plus" aria-hidden="true"></i>  Follow</a></div>
+                                <div class="button"><a href=""><i class="fas fa-plus" aria-hidden="true"></i>  Follow</a></div>
                             </div>
                         </div>
                         <div class="post-content">
                             <p class="post-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum velit quisquam quidem porro quia sint unde fuga minus expedita, hic ratione dicta earum assumenda, natus laborum error ea similique provident.</p>
                             <div class="post-img__container">                        
-                                <div class="semi-circle">                                
-                                    <div class="temp">
-                                        <img class="post-img" src="/assests/img.jpg" alt="" srcset="">
-                                    </div>
-                                </div>
-                                <div class="rectangle">
-                                    <p class="text">
-                                        10 Jobs on the rise and how to get them
-                                    </p>
-                                </div>
+                                <img class="post-img" src="/assests/img.png" alt="" srcset="">  
                             </div>
                         </div>
                     </div>
@@ -83,10 +101,10 @@
                             </p>
                         </div>
                         <div class="react">
-                            <span class="like"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Like  </span>
-                            <span class="comment"><i class="fa fa-comment-o" aria-hidden="true"></i> Comment  </span>
-                            <span class="share"><i class="fa fa-share" aria-hidden="true"></i> Share </span>
-                            <span class="send"><i class="fa fa-paper-plane" aria-hidden="true"></i> Send</span>
+                            <span class="like"><i class="fas fa-thumbs-up" aria-hidden="true"></i> Like  </span>
+                            <span class="comment"><i class="fas fa-comment" aria-hidden="true"></i> Comment  </span>
+                            <span class="share"><i class="fas fa-share" aria-hidden="true"></i> Share </span>
+                            <span class="send"><i class="fas fa-paper-plane" aria-hidden="true"></i> Send</span>
                         </div>
                     </div>
                 </div>
@@ -104,7 +122,7 @@
                                 </div>
                             </div>
                             <div class="follow-button">
-                                <div class="button"><a href=""><i class="fa fa-angle-down" aria-hidden="true"></i></a></div>
+                                <div class="options"><i class="fas fa-ellipsis-h"></i></div>    
                             </div>
                         </div>
                         <div class="post-content">
@@ -119,10 +137,10 @@
                             </p>
                         </div>
                         <div class="react">
-                            <span class="like"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Like  </span>
-                            <span class="comment"><i class="fa fa-comment-o" aria-hidden="true"></i> Comment  </span>
-                            <span class="share"><i class="fa fa-share" aria-hidden="true"></i> Share </span>
-                            <span class="send"><i class="fa fa-paper-plane" aria-hidden="true"></i> Send</span>
+                            <span class="like"><i class="fas fa-thumbs-up" aria-hidden="true"></i> Like  </span>
+                            <span class="comment"><i class="fas fa-comment" aria-hidden="true"></i> Comment  </span>
+                            <span class="share"><i class="fas fa-share" aria-hidden="true"></i> Share </span>
+                            <span class="send"><i class="fas fa-paper-plane" aria-hidden="true"></i> Send</span>
                         </div>
                     </div>
                 </div>

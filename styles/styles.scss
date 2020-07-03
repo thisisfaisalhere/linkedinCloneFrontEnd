@@ -12,6 +12,10 @@
 
 .header {
 
+    .navbar-mobile {
+        display: none;
+    }
+
     .navbar-main {
         background: #283e4a;
         height: auto;
@@ -19,6 +23,9 @@
         @include centerStuff(space-evenly, center);
         color: #f1eeee;
         z-index: 100;
+        position: fixed;
+        top: 0;
+        left: 0;
 
         .navbar-left {
 
@@ -69,11 +76,22 @@
                     padding: 0.5rem 1rem 0.5rem 1rem;
                     cursor: pointer;
 
+                    .nava-link {
+                        text-decoration: none;
+                        color: #f1eeee;
+                    }
+
+                    .fas {
+                        font-family: "Font Awesome 5 Free";
+                        font-size: 1.5rem;
+                        color: #f1eeee;
+                    }
+                    
+
                     img {
                         height: 2rem;
                         width: auto;
                     }
-
                 }
 
                 #profile {
@@ -96,6 +114,7 @@
 }
 
 .main {
+    padding: 3rem 0 3rem 0;
     background: #f5f5f5;
     .container {
         @include centerStuff(center, center);
@@ -210,41 +229,20 @@
                             font-weight: 300;
                             padding: 0 1rem 0.5rem 1rem;
                             margin: 0 0 0.5rem 0;
+                            z-index: 0;
                         }
     
                         .post-img__container {
                             margin: 0;
                             padding: 0;
-    
-                            .semi-circle {
-                                @include centerStuff(center,center);
-                                border-radius: 0 0 100% 100%;
-                                background: #83951f;
-                                height: 12rem;
-    
-                                .temp {
-                                    height: 12rem;
-                                    .post-img {
-                                        height: auto;
-                                        width: 100%;
-                                    }
-                                }
-                            }
-                            .rectangle {
-                                background: #d7ecc3;
-                                height: 6rem;
-                                @include centerStuff(center,center);
-                                // transform: translateY(-2rem);
-                                
-                                p {
-                                    font-size: 1.3rem;
-                                    font-weight: 200;
-                                }
+                            .post-img {
+                                width: 100%;
+                                height: auto;
                             }
                         }
                     }
                 }
-    
+
                 .likes-comments {
                     padding: 1rem 1rem 0.5rem 1rem;
     
@@ -260,6 +258,144 @@
                         .like, .comment, .share, .send {
                             font-size: 0.8rem;
                             padding-right: 0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:60rem) {
+    .header {
+        .navbar-main {
+           display: none;
+        }
+
+        .navbar-mobile {
+            display: flex;
+
+            .navbar-mobile__top {
+                position: fixed;
+                background: #283e4a;
+                height: auto;
+                width: 100vw;
+                @include centerStuff(center, center);
+                z-index: 100;
+                padding: 0.5rem;
+                box-shadow: 0 5px 5px -5px #333;
+
+                .navbar-profile {
+                    .navbar-profile__img {
+                        height: 1.8rem;
+                        width: 1.8rem;
+                        border-radius: 50%;
+                    }
+                }
+
+                .nav-search {
+                    margin-left: 0.5rem;
+
+                    .nav-search__form {
+                        .search-input {
+                            height: 1.8rem;
+                            width: 15rem;
+                            font-family: FontAwesome, 'Source Sans Pro', sans-serif;
+                            font-style: normal;
+                            font-weight: normal;
+                            text-decoration: inherit;
+                            font-size: 1.2rem;
+                            padding: 0.5rem;
+                        }
+                    }
+                }
+
+                .messages {
+                    margin-left: 0.5rem;
+                    .fas {
+                        font-family: "Font Awesome 5 Free";
+                        font-size: 1.5rem;
+                        color: #f1eeee;
+                    }
+                }
+            }
+
+            .navbar-mobile__bottom {
+                z-index: 100;
+                @include centerStuff(center, center);
+                background: rgb(238, 240, 243); //change this
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100vw;
+                box-shadow: 0 -5px 5px -5px #333;
+
+                .nav-items {
+                    width: 100vw;
+                    @include centerStuff(space-evenly, center);
+                    padding: 0.5rem;
+
+                    .nav-item {
+                        list-style: none;
+                        @include centerStuff(space-evenly, center);
+
+                        .nava-link {
+                            text-decoration: none;
+                            color: #636363;
+                        }
+
+                        .fas,
+                        .far {
+                            font-family: "Font Awesome 5 Free";
+                            font-size: 1.5rem;
+                            color: #636363;
+                        }
+
+                        img {
+                            height: 1.8rem;
+                            width: 1.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .main {
+        .container {
+            .container-left,
+            .container-right {
+                display: none;
+            }
+
+            .container-middle {
+                width: 60%;
+            }
+        }
+    }
+}
+
+@media(max-width:30rem) {
+    .main {
+        .container {
+            .container-middle {
+                width: 95%;
+
+                .post-container {
+                    .likes-comments {
+                        .counter {
+                            p {
+                                font-size: 0.8rem;
+                            }
+                        }
+
+
+                        .react {
+                            @include centerStuff(space-evenly, center);
+
+                            .fas {
+                                font-size: 1rem;
+                            }
                         }
                     }
                 }
