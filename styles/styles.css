@@ -179,6 +179,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   width: 45%;
+  background: #ffffff;
 }
 
 .main .container .container-middle .post-container {
