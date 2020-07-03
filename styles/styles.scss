@@ -1,0 +1,269 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@mixin centerStuff($var1, $var2) {
+    display: flex;
+    justify-content: $var1;
+    align-items: $var2;
+}
+
+.header {
+
+    .navbar-main {
+        background: #283e4a;
+        height: auto;
+        width: 100vw;
+        @include centerStuff(space-evenly, center);
+        color: #f1eeee;
+        z-index: 100;
+
+        .navbar-left {
+
+            @include centerStuff(center, center);
+
+            .navbar-brand {
+                height: 1.8rem;
+                width: 1.9rem;
+                border-radius: 0.5rem;
+                background-color: #f1eeee;
+                @include centerStuff(center, center);
+
+                .navbar-brand__icon {
+                    height: 2rem;
+                    width: 2rem;
+                }
+            }
+
+            .nav-search {
+
+                margin-left: 1rem;
+
+                .nav-search__form {
+                    .search-input {
+                        height: 2rem;
+                        width: 20rem;
+                        font-family: FontAwesome, 'Source Sans Pro', sans-serif;
+                        font-style: normal;
+                        font-weight: normal;
+                        text-decoration: inherit;
+                        font-size: 1.2rem;
+                        padding: 0.5rem;
+                    }
+                }
+            }
+        }
+
+        .navbar-right {
+
+            @include centerStuff(center, center);
+
+            .nav-items {
+                @include centerStuff(space-between, center);
+
+                .nav-item {
+                    list-style: none;
+                    flex: 1;
+                    padding: 0.5rem 1rem 0.5rem 1rem;
+                    cursor: pointer;
+
+                    img {
+                        height: 2rem;
+                        width: auto;
+                    }
+
+                }
+
+                #profile {
+                    img {
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            .try-premium {
+                font-family: 'Source Sans Pro', sans-serif;
+                width: 7rem;
+                color: #c7c5a4;
+                text-align: center;
+                font-size: 0.8rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.main {
+    background: #f5f5f5;
+    .container {
+        @include centerStuff(center, center);
+
+        .container-left, 
+        .container-right {
+            background: #ffffff;
+            width: 25%;
+            height: 100vh;
+            margin: 1rem;
+        }
+
+        .container-middle {
+            @include centerStuff(center, center);
+            flex-direction: column;
+            width: 45%;
+
+            .post-container {
+                background: #fff;
+                font-family: 'Source Sans Pro', sans-serif;
+                color: #272727;
+                border: 1px solid grey;
+                border-radius: 0.3rem;
+                margin: 0.5rem;
+                width: 100%;
+    
+                .other-followers {
+                    @include centerStuff(space-between, center);
+                    border-bottom: 0.5px solid rgb(221, 211, 211);
+                    padding: 0.5rem;
+    
+                    .follow-text {
+                        font-size: 1rem;
+                        font-weight: 200;
+    
+                        .bold-text {
+                            font-weight: 400;
+                        }
+                    }
+                }
+    
+                .post {
+                    .shared-by {
+                        @include centerStuff(space-between, center);
+                        padding: 1rem 1rem 0 1rem;
+    
+                        .profile {
+                            @include centerStuff(center, center);
+    
+                            .profile-photo { 
+                                img {         
+                                    width: 3rem;
+                                    height: 3rem;
+                                }
+                            }
+
+                            .profile-photo__circle {
+                                border-radius: 50%;
+                                width: 3rem;
+                                height: 3rem;
+
+                                img {
+                                    width: 3rem;
+                                    height: 3rem;
+                                    border-radius: 50%;
+                                }
+                            }
+
+                            .online-status {
+                                height: 0.8rem;
+                                width: 0.8rem;
+                                border-radius: 50%;
+                                background-color: orange;
+                                transform: translate(-0.6rem, 1rem);
+                            }
+
+                            .profile-details {
+                                padding: 0.5rem;
+                                .profile-name {
+                                    font-weight: 400;
+                                    span {
+                                        font-weight: 200;
+                                        font-size: 0.8rem;
+                                    }
+                                }
+
+                                .profile-summary, 
+                                .more-details {
+                                    font-weight: 200;
+                                    font-size: 0.8rem;
+                                }
+                            }
+                        }
+    
+                        .follow-button {
+                            .button {
+                                color: #5a5af8;
+                                a {
+                                    text-decoration: none;
+    
+                                    i {
+                                        padding: 0 0.5rem 0 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+    
+                    .post-content {
+                        .post-text {
+                            font-size: 1rem;
+                            font-weight: 300;
+                            padding: 0 1rem 0.5rem 1rem;
+                            margin: 0 0 0.5rem 0;
+                        }
+    
+                        .post-img__container {
+                            margin: 0;
+                            padding: 0;
+    
+                            .semi-circle {
+                                @include centerStuff(center,center);
+                                border-radius: 0 0 100% 100%;
+                                background: #83951f;
+                                height: 12rem;
+    
+                                .temp {
+                                    height: 12rem;
+                                    .post-img {
+                                        height: auto;
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                            .rectangle {
+                                background: #d7ecc3;
+                                height: 6rem;
+                                @include centerStuff(center,center);
+                                // transform: translateY(-2rem);
+                                
+                                p {
+                                    font-size: 1.3rem;
+                                    font-weight: 200;
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                .likes-comments {
+                    padding: 1rem 1rem 0.5rem 1rem;
+    
+                    .emojis {
+                        padding-right: 0.5rem;
+                    }
+                    .count {
+                        font-weight: 200;
+                    }
+    
+                    .react {
+                        padding-top: 1rem;
+                        .like, .comment, .share, .send {
+                            font-size: 0.8rem;
+                            padding-right: 0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
