@@ -288,7 +288,7 @@
 
             .navbar-mobile__top {
                 position: fixed;
-                background: #283e4a;
+                background: #5a8fbb;
                 height: auto;
                 width: 100vw;
                 @include centerStuff(center, center);
@@ -337,7 +337,7 @@
             .navbar-mobile__bottom {
                 z-index: 100;
                 @include centerStuff(center, center);
-                background: rgb(238, 240, 243);
+                background: #eef0f3;
                 position: fixed;
                 bottom: 0;
                 left: 0;
