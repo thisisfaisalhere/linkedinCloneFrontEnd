@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linkedin Clone</title>
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/> -->
     <script src="https://kit.fontawesome.com/b6a16a6ee4.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="/styles/styles.css">
     <link rel="shortcut icon" href="/assests/linkedin.png" type="image/x-icon">
 </head>
 <body>
+    <div class="backdrop"></div>
     <section class="header">
         <div class="navbar-main">
             <div class="navbar-left">
@@ -39,8 +39,8 @@
 
         <div class="navbar-mobile">
             <div class="navbar-mobile__top">
-                <div class="navbar-profile">
-                    <a href="" class="nav-link"><img class="navbar-profile__img" src="/assests/profile.png" alt="profile"></a>
+                <div class="navbar-menu">
+                    <i class="fas fa-bars"></i>
                 </div>
                 <div class="nav-search">
                     <form class="nav-search__form">
@@ -60,6 +60,35 @@
                     <li class="nav-item" id="notification"><a href="" class="nav-link"><i class="fas fa-bell"></i></a></li>
                     <li class="nav-item" id="work"><a href="" class="nav-link"><i class="fas fa-briefcase"></i></a></li>
                 </ul>
+            </div>
+            <div class="navbar-mobile__side">
+                <div class="navbar-mobile__side-banner">
+                    <div class="banner-box">
+                        <div class="banner-box__empty"></div>
+                        <div class="banner-box__top">
+                            <a href="" class="banner-link"><img class="profile-img" src="/assests/profile.png" alt="profile"></a>
+                            <i class="fas fa-moon"></i>
+                        </div>
+                        <div class="banner-box__bottom">
+                            <p class="profile-details">Lex Luther</br>+91 90909 00990</p>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-mobile__side-menu">
+                    <ul class="menu-items">
+                        <li class="menu-item"><a href="" class="menu-link"><i class="fas fa-user-friends"></i>New Group</a></li>
+                        <li class="menu-item"><a href="" class="menu-link"><i class="fas fa-lock"></i>&nbsp; Secret Chat</a></li>
+                        <li class="menu-item"><a href="" class="menu-link"><i class="fas fa-bullhorn"></i> New Channel</a></li>
+                        <li class="menu-item"><a href="" class="menu-link"><i class="fas fa-user"></i>&nbsp;&nbsp;Contacts</a></li>
+                        <li class="menu-item"><a href="" class="menu-link"><i class="fas fa-phone-alt"></i>&nbsp;Calls</a></li>
+                        <li class="menu-item"><a href="" class="menu-link"><i class="fas fa-bookmark"></i>&nbsp;&nbsp;Saved Messages</a></li>
+                        <li class="menu-item"><a href="" class="menu-link"><i class="fas fa-cog"></i>&nbsp;Settings</a></li>
+                        <li class="menu-item"><div class="menu-divider"></div></li>
+                        <li class="menu-item"><a href="" class="menu-link"><i class="fas fa-user-plus"></i>Invite Friends</a></li>
+                        <li class="menu-item"><a href="" class="menu-link"><i class="fas fa-question-circle"></i>  Help</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -148,5 +177,6 @@
             <div class="container-left"></div>
         </div>
     </section>
+    <script src="js/app.js"></script>
 </body>
 </html>

@@ -10,6 +10,17 @@
     align-items: $var2;
 }
 
+.backdrop {
+    height: 100%;
+    width: 100vw;
+    background: #283e4a70;
+    z-index: 110;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
 .header {
 
     .navbar-mobile {
@@ -33,9 +44,8 @@
 
             .navbar-brand {
                 height: 1.8rem;
-                width: 1.9rem;
-                border-radius: 0.5rem;
-                background-color: #f1eeee;
+                width: 2rem;
+                border-radius: 0.2rem;
                 @include centerStuff(center, center);
 
                 .navbar-brand__icon {
@@ -116,8 +126,9 @@
 .main {
     padding: 3rem 0 3rem 0;
     background: #f5f5f5;
+
     .container {
-        @include centerStuff(center, center);
+        @include centerStuff(center, flex-start);
 
         .container-left, 
         .container-right {
@@ -131,7 +142,6 @@
             @include centerStuff(center, center);
             flex-direction: column;
             width: 45%;
-            background: #ffffff;
 
             .post-container {
                 background: #fff;
@@ -286,21 +296,23 @@
                 padding: 0.5rem;
                 box-shadow: 0 5px 5px -5px #333;
 
-                .navbar-profile {
-                    .navbar-profile__img {
-                        height: 1.8rem;
-                        width: 1.8rem;
-                        border-radius: 50%;
-                    }
+                .navbar-menu {
+                    margin-right: 0.25rem;
+                    margin-left: 0.25rem;
+                    .fas,
+                    .far {
+                        font-family: "Font Awesome 5 Free";
+                        font-size: 1.5rem;
+                        color: #ffffff;
+                    }   
                 }
 
                 .nav-search {
-                    margin-left: 0.5rem;
-
                     .nav-search__form {
                         .search-input {
+                            margin: 0 1rem 0 1rem;
                             height: 1.8rem;
-                            width: 15rem;
+                            width: 22rem;
                             font-family: FontAwesome, 'Source Sans Pro', sans-serif;
                             font-style: normal;
                             font-weight: normal;
@@ -312,7 +324,8 @@
                 }
 
                 .messages {
-                    margin-left: 0.5rem;
+                    margin-right: 0.25rem;
+                    margin-left: 0.25rem;
                     .fas {
                         font-family: "Font Awesome 5 Free";
                         font-size: 1.5rem;
@@ -324,7 +337,7 @@
             .navbar-mobile__bottom {
                 z-index: 100;
                 @include centerStuff(center, center);
-                background: rgb(238, 240, 243); //change this
+                background: rgb(238, 240, 243);
                 position: fixed;
                 bottom: 0;
                 left: 0;
@@ -359,6 +372,90 @@
                     }
                 }
             }
+
+            .navbar-mobile__side {
+                display: none;
+                width: 70%;
+                height: 100vh;
+                position: fixed;
+                z-index: 120;
+                background-color: #ebebeb;
+                font-family: 'Source Sans Pro', sans-serif;
+                
+                .navbar-mobile__side-banner {
+                    background: #5a8fbb;
+                    height: 20%;
+                    width: 100%;
+
+                    .banner-box {
+                        @include centerStuff(space-between, center);
+                        width: 100%;
+                        height: 100%;
+                        flex-direction: column;
+
+                        .banner-box__top {
+                            @include centerStuff(space-between, center);
+                            width: 90%;
+                            .banner-link {
+                                .profile-img {
+                                    height: 3rem;
+                                    width: 3rem;
+                                    border-radius: 50%;
+                                }
+                            }
+                        }
+
+                        .banner-box__bottom {
+                            @include centerStuff(space-between, center);
+                            padding-bottom: 0.5rem;
+                            width: 90%;
+
+                            .profile-details {
+                                color: #f1eeee;
+                                display: inline;
+                            }
+                        }
+
+                        .fas {
+                            color: #f1eeee;
+                        }
+                    }
+                }
+
+                .navbar-mobile__side-menu {
+                    height: 100%;
+
+                    .menu-items {
+                        @include centerStuff(space-between, flex-start);
+                        flex-direction: column;
+                        
+                        .menu-item {
+                            list-style: none;
+                            height: 2.5rem;
+                            width: 100%;
+                            padding-top: 1rem;
+
+                            .menu-link {
+                                padding: 0.5rem 1rem 0.5rem 1rem;
+                                font-size: 1.2rem;
+                                text-decoration: none;
+                                color: #272727;
+                                font-weight: 400;
+
+                                .fas {
+                                    padding-right: 1rem;
+                                    color: #616161;
+                                }
+                            }
+
+                            .menu-divider {
+                                padding: 0;
+                                border-bottom: 1px solid #8d8d8d;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -377,6 +474,23 @@
 }
 
 @media(max-width:30rem) {
+
+    .header {
+        .navbar-mobile {
+            .navbar-mobile__top {
+                @include centerStuff(space-between, center);
+                .nav-search {
+                    .nav-search__form {
+                        .search-input {
+                            margin: 0;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .main {
         .container {
             .container-middle {
