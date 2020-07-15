@@ -582,9 +582,8 @@
     -webkit-columns: #272727;
             columns: #272727;
   }
-  .header .navbar-mobile .navbar-mobile__side .navbar-mobile__side-menu .menu-items .menu-item .menu-divider {
-    pointer-events: none;
-    padding: 0;
+  .header .navbar-mobile .navbar-mobile__side .navbar-mobile__side-menu .menu-items .menu-divider {
+    padding-top: 1rem;
     margin: 0;
     border-bottom: 1px solid #8d8d8d;
   }

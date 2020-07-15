@@ -456,13 +456,11 @@
                                 font-size: 1.2rem;
                                 columns: #272727;
                             }
-
-                            .menu-divider {
-                                pointer-events: none;
-                                padding: 0;
-                                margin: 0;
-                                border-bottom: 1px solid #8d8d8d;
-                            }
+                        }
+                        .menu-divider {
+                            padding-top: 1rem;
+                            margin: 0;
+                            border-bottom: 1px solid #8d8d8d;
                         }
                     }
                 }
