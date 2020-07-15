@@ -3,7 +3,6 @@ const menuBtn = document.querySelector(".navbar-menu");
 const sideMenu = document.querySelector(".navbar-mobile__side");
 const sideBanner = document.querySelector(".banner-box");
 const menu = document.querySelector(".menu-items");
-const menuItem = document.querySelector(".menu-item");
 
 menuBtn.addEventListener("click", () => {
     sideMenu.style.width = "80%";
@@ -13,7 +12,6 @@ menuBtn.addEventListener("click", () => {
         menu.style.display = "block";
     }, 300);
     backdrop.style.display = "flex";
-    menuItem.style.pointerEvents = "all";
     disableScrolling();
 });
 
@@ -23,7 +21,6 @@ backdrop.addEventListener("click", ()=> {
     sideBanner.style.display = "none";
     menu.style.display = "none";
     backdrop.style.display = "none";
-    menuItem.style.pointerEvents = "none";
     enableScrolling();
 });
 

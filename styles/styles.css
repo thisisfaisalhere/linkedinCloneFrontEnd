@@ -376,6 +376,7 @@
   .header .navbar-mobile .navbar-mobile__top .navbar-menu {
     margin-right: 0.25rem;
     margin-left: 0.25rem;
+    cursor: pointer;
   }
   .header .navbar-mobile .navbar-mobile__top .navbar-menu .fas,
   .header .navbar-mobile .navbar-mobile__top .navbar-menu .far {
@@ -384,7 +385,7 @@
     color: #ffffff;
   }
   .header .navbar-mobile .navbar-mobile__top .nav-search .nav-search__form .search-input {
-    margin: 0 1rem 0 1rem;
+    margin: 0 0.5rem 0 0.5rem;
     height: 1.8rem;
     width: 22rem;
     font-family: FontAwesome, 'Source Sans Pro', sans-serif;
@@ -565,7 +566,6 @@
     width: 100%;
     padding-top: 1rem;
     cursor: pointer;
-    pointer-events: none;
   }
   .header .navbar-mobile .navbar-mobile__side .navbar-mobile__side-menu .menu-items .menu-item .icon {
     margin-left: 1rem;
