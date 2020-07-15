@@ -154,7 +154,7 @@
     
                 .other-followers {
                     @include centerStuff(space-between, center);
-                    border-bottom: 0.5px solid rgb(221, 211, 211);
+                    border-bottom: 0.5px solid #ddd3d3;
                     padding: 0.5rem;
     
                     .follow-text {
@@ -374,13 +374,14 @@
             }
 
             .navbar-mobile__side {
-                display: none;
-                width: 80%;
+                width: 0;
+                visibility: hidden;
                 height: 100vh;
                 position: fixed;
                 z-index: 120;
                 background-color: #ebebeb;
                 font-family: 'Source Sans Pro', sans-serif;
+                transition: all 0.5s;
                 
                 .navbar-mobile__side-banner {
                     background: #5a8fbb;
@@ -392,6 +393,7 @@
                         width: 100%;
                         height: 100%;
                         flex-direction: column;
+                        display: none;
 
                         .banner-box__top {
                             @include centerStuff(space-between, center);
@@ -428,28 +430,37 @@
                     .menu-items {
                         @include centerStuff(space-between, flex-start);
                         flex-direction: column;
-                        
+                        display: none;
+
                         .menu-item {
-                            list-style: none;
+                            @include centerStuff(flex-start, center);
                             height: 2.5rem;
                             width: 100%;
                             padding-top: 1rem;
+                            cursor: pointer;
+                            pointer-events: none;
 
-                            .menu-link {
-                                padding: 0.5rem 1rem 0.5rem 1rem;
-                                font-size: 1.2rem;
-                                text-decoration: none;
-                                color: #272727;
-                                font-weight: 400;
+                            .icon {
+                                margin-left: 1rem;
+                                width: 1.5rem;
+                                height: 1.5rem;
 
                                 .fas {
-                                    padding-right: 1rem;
+                                    font-size: 1.2rem;
                                     color: #616161;
                                 }
                             }
 
+                            .text {
+                                margin-left: 0.5rem;
+                                font-size: 1.2rem;
+                                columns: #272727;
+                            }
+
                             .menu-divider {
+                                pointer-events: none;
                                 padding: 0;
+                                margin: 0;
                                 border-bottom: 1px solid #8d8d8d;
                             }
                         }
